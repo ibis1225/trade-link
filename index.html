@@ -1,8 +1,13 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0;url=https://hobby-attitudes-organizations-showcase.trycloudflare.com">
-<script>location.replace("https://hobby-attitudes-organizations-showcase.trycloudflare.com");</script>
 <title>미장 리포트로 이동</title></head>
 <body style="font-family:sans-serif;padding:40px">
-이동 중... 자동으로 넘어가지 않으면 <a href="https://hobby-attitudes-organizations-showcase.trycloudflare.com">여기</a>를 누르세요.
+<p id="m">이동 중...</p>
+<script>
+fetch('url.json?ts='+Date.now(),{cache:'no-store'})
+  .then(r=>r.json()).then(d=>location.replace(d.url))
+  .catch(()=>{document.getElementById('m').innerHTML=
+    '주소 조회 실패 — <a href="https://trusts-steering-papers-defend.trycloudflare.com">마지막 주소로 이동</a> (안 되면 잠시 후 새로고침)';});
+</script>
+<noscript><a href="https://trusts-steering-papers-defend.trycloudflare.com">리포트로 이동</a></noscript>
 </body></html>
